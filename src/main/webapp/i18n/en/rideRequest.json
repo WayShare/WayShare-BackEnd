@@ -1,0 +1,26 @@
+{
+  "wayShareApp": {
+    "rideRequest": {
+      "home": {
+        "title": "Ride Requests",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ride Request",
+        "createOrEditLabel": "Create or edit a Ride Request",
+        "notFound": "No Ride Requests found"
+      },
+      "created": "A new Ride Request is created with identifier {{ param }}",
+      "updated": "A Ride Request is updated with identifier {{ param }}",
+      "deleted": "A Ride Request is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ride Request {{ id }}?"
+      },
+      "detail": {
+        "title": "Ride Request"
+      },
+      "id": "ID",
+      "status": "Status",
+      "requestTime": "Request Time",
+      "ride": "Ride"
+    }
+  }
+}

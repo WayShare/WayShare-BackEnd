@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240701034524"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "requestTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "RideRequest",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "ride",
+      "otherEntityRelationshipName": "requests",
+      "relationshipName": "ride",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

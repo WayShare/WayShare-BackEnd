@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20240701034527"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "score",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min", "max"],
+      "fieldValidateRulesMax": "5",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "fieldName": "feedback",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Rating",
+  "relationships": [
+    {
+      "otherEntityName": "member",
+      "otherEntityRelationshipName": "ratingsGiven",
+      "relationshipName": "giver",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "member",
+      "otherEntityRelationshipName": "ratingsReceived",
+      "relationshipName": "receiver",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

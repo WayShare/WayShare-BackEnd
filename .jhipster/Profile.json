@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20240701034522"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "photo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactDetails",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Profile",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

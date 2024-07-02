@@ -1,0 +1,52 @@
+entity Profile {
+  firstName String,
+  lastName String,
+  photo String,
+  contactDetails String
+}
+
+entity Ride {
+  startLocation String required,
+  endLocation String required,
+  startTime ZonedDateTime required,
+  endTime ZonedDateTime,
+  recurring Boolean
+}
+
+entity RideRequest {
+  status String required,
+  requestTime ZonedDateTime required
+}
+
+entity Notification {
+  message String required,
+  timestamp ZonedDateTime required,
+  read Boolean
+}
+
+entity Message {
+  content String required,
+  timestamp ZonedDateTime required
+}
+
+entity Rating {
+  score Integer required min(1) max(5),
+  feedback String
+}
+
+relationship OneToOne {
+  Profile{user} to User with builtInEntity
+}
+
+relationship OneToMany {
+  User{rides} to Ride{user} with builtInEntity,
+  Ride{requests} to RideRequest{ride},
+  User{notifications} to Notification{user} with builtInEntity,
+  Ride{messages} to Message{ride},
+  User{ratingsGiven} to Rating{giver} with builtInEntity,
+  User{ratingsReceived} to Rating{receiver} with builtInEntity
+}
+
+service all with serviceClass
+dto all with mapstruct
+paginate RideRequest, Notification with infinite-scroll

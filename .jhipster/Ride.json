@@ -1,0 +1,58 @@
+{
+  "annotations": {
+    "changelogDate": "20240701034523"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "startLocation",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "endLocation",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "startTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "endTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "recurring",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Ride",
+  "relationships": [
+    {
+      "otherEntityName": "rideRequest",
+      "otherEntityRelationshipName": "ride",
+      "relationshipName": "requests",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "message",
+      "otherEntityRelationshipName": "ride",
+      "relationshipName": "messages",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "member",
+      "otherEntityRelationshipName": "rides",
+      "relationshipName": "member",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

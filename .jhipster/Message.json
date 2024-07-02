@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20240701034526"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Message",
+  "relationships": [
+    {
+      "otherEntityName": "ride",
+      "otherEntityRelationshipName": "messages",
+      "relationshipName": "ride",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}
